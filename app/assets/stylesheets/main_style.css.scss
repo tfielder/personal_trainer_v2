@@ -1,0 +1,280 @@
+// Variables
+$primary_text_color: white;
+$slideshow_container_width: 55rem;
+$slideshow_container_height: 34rem;
+
+// Reusable stylings
+.exercise_div {
+  display: flex;
+  width: 45rem;
+  color: white;
+
+  &-name {
+    margin-right: 1rem;
+  }
+}
+
+.form_label {
+  color: white;
+  margin-right: 1rem;
+}
+
+.form_field {
+  display: flex;
+  color: white;
+}
+
+.center_column {
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.form {
+  &-section {
+    color: $primary_text_color;
+  }
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+
+  &_nav-item {
+    padding: 0 .5rem;
+  }
+
+  &_navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  &_title {
+    padding: 0 1rem;
+  }
+
+}
+
+.main-view {
+  height: 50rem;
+
+  &__button {
+    width: 16rem;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 10px;
+    color: $primary_text_color;
+    margin: 0 2rem;
+    border: 2px solid orange;
+  }
+
+  &__picture {
+    background-color: black;
+    height: 65%;
+  }
+}
+
+.image {
+  height: auto;
+  width: auto;
+}
+
+// View Stylings
+@mixin dimensions {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin basic_view {
+  @include dimensions
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.root_view {
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 50rem;
+}
+
+.home_view {
+  @include basic_view
+
+  &__buttons-container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &-image {
+    height: 40rem;
+    width: auto;
+    margin-left: 2rem;
+  }
+
+  &-login_button {
+    text-decoration: none;
+  }
+}
+
+.dashboard_view {
+  @include basic_view
+  background-image: image-url("background_assets/workouts1.jpeg");
+}
+
+.workouts_view {
+  @include basic_view
+  background-image: image-url("background_assets/workouts.jpeg");
+}
+
+.advice_view {
+  @include basic_view
+  background-image: image-url("background_assets/bodybuilding.jpeg");
+
+  &-links {
+    align-self: flex-start;
+    margin-left: 2rem;
+  }
+}
+
+._view {
+  @include dimensions
+}
+
+// Selector Stylings
+
+h1 {
+  color: $primary_text_color;
+  font-family: 'Allan', serif;
+}
+
+p {
+  color: $primary_text_color;
+}
+
+a:link {
+  color: orange;
+}
+
+a:visited {
+  color: orange;
+}
+
+a:hover {
+  color: $primary_text_color;
+}
+
+a:active {
+  color: orange;
+}
+
+body {
+  margin: 0;
+}
+
+// Photo Bank Styling
+* {box-sizing:border-box}
+
+.community_view-slideshow_container {
+  //max-width: 1000px;
+  height: $slideshow_container_height;
+  width: $slideshow_container_width;
+  position: relative;
+  margin: auto;
+}
+
+.community_image {
+  height: auto;
+  width: $slideshow_container_width;
+}
+
+.community_image-vertical {
+  height: $slideshow_container_height;
+  width: auto;
+  margin: 0 30%;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

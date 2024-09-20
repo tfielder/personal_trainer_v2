@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Date: 01/04/21
+with 09/19/24 update
+Designer: Tim Fielder
+Rails Version: 7.2.1 from 6.1.0
+Ruby Version: 3.2.0 from 2.6.0
 
-Things you may want to cover:
+This is a prototype app to create and record workouts.
 
-* Ruby version
+Additional Tech-Stack
+BEM
+HTML5
+SCSS
+JS
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

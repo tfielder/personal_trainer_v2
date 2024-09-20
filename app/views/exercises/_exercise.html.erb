@@ -1,0 +1,11 @@
+<div class="exercise_div">
+  <div class="exercise_div-name">
+    Exercise:
+    <%= exercise.exercise_name %>
+  </div>
+  <div>
+  <%= link_to 'Remove Exercise', [exercise.workout, exercise],
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+  </div>
+</div>
